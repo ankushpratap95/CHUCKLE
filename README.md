@@ -196,49 +196,17 @@ Checkpoints are written to:
 saved_weights/{subject_dependent,subject_independent}/<scenario>/{lstm,transformer}/random_seed_<seed>/stage_<n>/model_checkpoint.pth
 ```
 
-## Results (from the paper)
-
-Mean macro accuracy (± std.) over 10 trials; `*` = statistically significant
-vs. non-curriculum baseline (paired one-sided t-test, p < 0.05).
-
-**Subject Dependent**
-
-| Curriculum | LSTM | Transformer |
-|---|---|---|
-| Non-Curriculum | 0.6522 (±0.015) | 0.6685 (±0.012) |
-| Random Curriculum | 0.6492 (±0.011) | 0.6569 (±0.015) |
-| Intended Emotion Score | 0.6609 (±0.009) | 0.6763 (±0.017) |
-| Entropy Score | 0.6568 (±0.011) | 0.6739 (±0.009) |
-| **Intended-Perceived Agreement 1** | **0.6623 (±0.010)\*** | **0.6827 (±0.012)\*** |
-| Intended-Perceived Agreement 2 | 0.6473 (±0.014) | 0.6722 (±0.023) |
-| Intended-Perceived Agreement 3 | 0.6505 (±0.012) | 0.6819 (±0.025)\* |
-
-**Subject Independent**
-
-| Curriculum | LSTM | Transformer |
-|---|---|---|
-| Non-Curriculum | 0.6554 (±0.012) | 0.6659 (±0.016) |
-| Random Curriculum | 0.6504 (±0.018) | 0.6595 (±0.023) |
-| Intended Emotion Score | 0.6626 (±0.009) | 0.6739 (±0.014) |
-| Entropy Score | 0.6552 (±0.012) | 0.6826 (±0.009)\* |
-| **Intended-Perceived Agreement 1** | **0.6669 (±0.008)\*** | **0.6857 (±0.014)\*** |
-| Intended-Perceived Agreement 2 | 0.6550 (±0.014) | 0.6820 (±0.013)\* |
-| Intended-Perceived Agreement 3 | 0.6615 (±0.012) | 0.6833 (±0.021)\* |
-
-**Key findings:**
-- Rule-based curricula (Intended-Perceived Agreement) consistently beat both the non-curriculum baseline and score-based curricula.
-- `Intended-Perceived Agreement 1` is the best curriculum: **+1.6%/+1.8%** relative accuracy (LSTM, SD/SI) and **+2.1%/+3.0%** (Transformer, SD/SI) over non-curriculum, while using **~17% fewer gradient updates**.
-- `Intended-Perceived Agreement 2` reaches comparable accuracy with **~40% fewer gradient updates**.
-- The random curriculum baseline performs *worse* than non-curriculum, confirming the gains come from difficulty ordering, not just staged training.
-
 ## Citation
 
 ```bibtex
-@inproceedings{singh2026chuckle,
-  title     = {CHUCKLE -- When Humans Teach AI to Learn Emotions the Easy Way},
-  author    = {Singh, Ankush Pratap and Cao, Houwei and Liu, Yong},
-  booktitle = {Proceedings of Interspeech 2026},
-  year      = {2026}
+@misc{singh2026chucklehumansteach,
+      title={CHUCKLE -- When Humans Teach AI To Learn Emotions The Easy Way}, 
+      author={Ankush Pratap Singh and Houwei Cao and Yong Liu},
+      year={2026},
+      eprint={2510.09382},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2510.09382}, 
 }
 ```
 
@@ -256,16 +224,5 @@ Please also cite the CREMA-D dataset if you use it:
 }
 ```
 
-## Generative AI Use Disclosure
-
-As disclosed in the paper: generative AI tools were used only for minor
-language editing/phrasing of the manuscript text, not for generating
-scientific ideas, experimental design, results, or conclusions.
-
-## License
-
-<!-- TODO: add a LICENSE file and name it here, e.g. MIT -->
-
 ## Contact
-
-<!-- TODO: add a contact email if you want to field data-access questions -->
+For more information, email at ax2047@nyu.edu or asing213@nyit.edu
