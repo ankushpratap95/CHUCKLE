@@ -65,10 +65,10 @@ proposed:
 
 **Rule-based** (samples categorized into 4 groups, then ordered into the same
 4 bins by 3 different rules):
-- *Clear Match* — clear majority of perceived labels, and it matches the intended label.
-- *Clear Mismatch* — clear majority of perceived labels, but it does **not** match the intended label.
-- *Ambiguous Match* — no dominant majority, but multiple annotations are consistent with the intended label.
-- *Ambiguous Mismatch* — no dominant majority, and the intended label receives no consistent support.
+- `Clear Match` — clear majority of perceived labels, and it matches the intended label.
+- `Clear Mismatch` — clear majority of perceived labels, but it does **not** match the intended label.
+- `Ambiguous Match` — no dominant majority, but multiple annotations are consistent with the intended label.
+- `Ambiguous Mismatch` — no dominant majority, and the intended label receives no consistent support.
 
   | Curriculum | Bin ordering (Easy → Tough) | Rationale |
   |---|---|---|
